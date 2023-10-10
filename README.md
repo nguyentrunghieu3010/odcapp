@@ -36,9 +36,13 @@ npm install
 
 We use npm scripts and [Angular CLI][] with [Webpack][] as our build system.
 
+Check the gradlew Version
+```
+./gradlew -v
+```
+
 Run the following commands in two separate terminals to create a blissful development experience where your browser
 auto-refreshes when files change on your hard drive.
-
 ```
 ./gradlew -x webapp
 npm start
