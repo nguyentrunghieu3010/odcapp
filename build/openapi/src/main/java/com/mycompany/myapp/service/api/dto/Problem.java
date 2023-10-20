@@ -19,7 +19,7 @@ import javax.annotation.Generated;
  * Problem
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-10-10T13:23:24.414680+07:00[Asia/Ho_Chi_Minh]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-10-12T21:43:16.213924+07:00[Asia/Ho_Chi_Minh]")
 public class Problem {
 
   @JsonProperty("type")
