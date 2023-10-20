@@ -2,6 +2,20 @@ package com.mycompany.myapp.utils;
 
 public class ReverseSolutions {
 
+    private static String reverseOnlyLetters2(String str){
+        StringBuilder sb = new StringBuilder(str);
+       for(int i=0, j=str.length()-1; i<j;) {
+           if(!Character.isLetter(sb.charAt(i))) {
+               ++i;
+           } else if(!Character.isLetter(sb.charAt(j))){
+               --j;
+           } else {
+               sb.setCharAt(i, sb.charAt(j));
+               sb.setCharAt(j--, str.charAt(i++));
+           }
+       }
+        return sb.toString();
+    }
 
     private static String reverseOnlyLetters1(String str){
         char temp[] = str.toCharArray();
@@ -21,13 +35,14 @@ public class ReverseSolutions {
 
     public static void main (String[] args) {
         String inputString1 = "ab-cd";
-        String output1 = reverseOnlyLetters1(inputString1);
-        System.out.println("Output is dc-ba = " + output1);
-
         String inputString2 = "a-bC-dEf-ghIj";
-        String output2 = reverseOnlyLetters1(inputString2);
-        System.out.println("Output is: " + output2);
+
+        if(reverseOnlyLetters1(inputString1).equalsIgnoreCase(reverseOnlyLetters2(inputString1))) {
+            System.out.println("True");
+        } else  if(reverseOnlyLetters1(inputString2).equalsIgnoreCase(reverseOnlyLetters2(inputString2))) {
+            System.out.println("True");
+        } else {
+            System.out.println("False");
+        }
     }
-
-
 }
